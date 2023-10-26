@@ -1,12 +1,12 @@
 public class Main {
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3}; // Инициализация на масива
+        int[] arr = {1, 2, 3}; 
 
-        int sumEven = 0; // Променлива за сумата на четните числа
+        int sumEven = 0; 
 
-        for (int num : arr) { // Обхождане на елементите в масива
-            if (num % 2 == 0) { // Проверка дали числото е четно
-                sumEven += num; // Нарастване на сумата
+        for (int num : arr) { 
+            if (num % 2 == 0) { 
+                sumEven += num; 
             }
         }
 
