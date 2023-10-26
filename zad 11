@@ -1,0 +1,15 @@
+public class Main {
+    public static void main(String[] args) {
+        int num = 15; 
+
+        if (isGreaterThanTen(num)) {
+            System.out.println(num + " е по-голямо от 10.");
+        } else {
+            System.out.println(num + " не е по-голямо от 10.");
+        }
+    }
+
+    public static boolean isGreaterThanTen(int num) {
+        return num > 10;
+    }
+}
