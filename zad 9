@@ -1,0 +1,15 @@
+public class Main {
+    public static void main(String[] args) {
+        int num = 7; 
+
+        if (isEven(num)) {
+            System.out.println(num + " е четно.");
+        } else {
+            System.out.println(num + " е нечетно.");
+        }
+    }
+
+    public static boolean isEven(int num) {
+        return num % 2 == 0;
+    }
+}
