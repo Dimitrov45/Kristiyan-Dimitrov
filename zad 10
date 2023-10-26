@@ -1,0 +1,15 @@
+public class Main {
+    public static void main(String[] args) {
+        int num = -5; 
+
+        if (isPositive(num)) {
+            System.out.println(num + " е положително.");
+        } else {
+            System.out.println(num + " е отрицателно.");
+        }
+    }
+
+    public static boolean isPositive(int num) {
+        return num > 0;
+    }
+}
