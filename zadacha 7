@@ -1,0 +1,72 @@
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5};
+
+        int sum = 0;
+        int evenSum = 0;
+        int oddSum = 0;
+        for (int num : arr) {
+            sum += num;
+            if (num % 2 == 0) {
+                evenSum += num;
+            } else {
+                oddSum += num;
+            }
+        }
+
+        int[] reversedArr = new int[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            reversedArr[i] = arr[arr.length - 1 - i];
+        }
+
+        int max = arr[0];
+        int min = arr[0];
+        for (int num : arr) {
+            if (num > max) {
+                max = num;
+            }
+            if (num < min) {
+                min = num;
+            }
+        }
+
+        boolean isPrime = isPrime(sum);
+
+        int[][] matrix = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+
+        int diagonalSum = sumDiagonals(matrix);
+
+        System.out.println("Сума: " + sum + ", Четни: " + evenSum + ", Нечетни: " + oddSum);
+        System.out.println("Обърнат: " + Arrays.toString(reversedArr));
+        System.out.println("Макс: " + max + ", Мин: " + min);
+        System.out.println("Просто: " + isPrime);
+        System.out.println("Сума диагонали: " + diagonalSum);
+    }
+
+    public static boolean isPrime(int num) {
+        if (num <= 1) {
+            return false;
+        }
+
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    public static int sumDiagonals(int[][] matrix) {
+        int sum = 0;
+        for (int i = 0; i < matrix.length; i++) {
+            sum += matrix[i][i]; 
+            sum += matrix[i][matrix.length - 1 - i]; 
+        }
+        return sum;
+    }
+}
