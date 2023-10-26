@@ -1,0 +1,13 @@
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3};
+        int sumOdd = 0; 
+
+        for (int num : arr) { 
+            if (num % 2 != 0) { 
+                sumOdd += num;
+        }
+
+        System.out.println("Сумата на нечетните числа в масива е: " + sumOdd);
+    }
+}
