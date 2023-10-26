@@ -1,0 +1,15 @@
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3}; // Инициализация на масива
+
+        int sumEven = 0; // Променлива за сумата на четните числа
+
+        for (int num : arr) { // Обхождане на елементите в масива
+            if (num % 2 == 0) { // Проверка дали числото е четно
+                sumEven += num; // Нарастване на сумата
+            }
+        }
+
+        System.out.println("Сумата на четните числа в масива е: " + sumEven);
+    }
+}
