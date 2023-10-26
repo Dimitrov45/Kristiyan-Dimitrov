@@ -1,0 +1,21 @@
+public class Main {
+    public static void main(String[] args) {
+        int[][] matrix = {
+            {1, 2},
+            {3, 4}
+        }; 
+
+        int diagonalSum = sumDiagonals(matrix); 
+
+        System.out.println("Сумата на диагоналите в матрицата е: " + diagonalSum);
+    }
+
+    public static int sumDiagonals(int[][] matrix) {
+        int sum = 0;
+        for (int i = 0; i < matrix.length; i++) {
+            sum += matrix[i][i]; 
+            sum += matrix[i][matrix.length - 1 - i]; 
+        }
+        return sum;
+    }
+}
