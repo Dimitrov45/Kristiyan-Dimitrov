@@ -1,0 +1,20 @@
+public class Main {
+    public static void main(String[] args) {
+        int[][] matrix = {
+            {1, 2},
+            {3, 4}
+        }; 
+
+        int sumFirstRow = sumRow(matrix, 0); 
+
+        System.out.println("Сумата на елементите на първия ред е: " + sumFirstRow);
+    }
+
+    public static int sumRow(int[][] matrix, int row) {
+        int sum = 0;
+        for (int i = 0; i < matrix[row].length; i++) {
+            sum += matrix[row][i];
+        }
+        return sum;
+    }
+}
