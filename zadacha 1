@@ -1,0 +1,51 @@
+public class ArrayOperations {
+    private int[] array;
+
+    public void initializeArray(int[] arr) {
+        if (arr.length == 5) {
+            array = arr;
+        } else {
+            System.out.println("Масивът трябва да има точно 5 елемента.");
+        }
+    }
+
+    public int findSum() {
+        int sum = 0;
+        for (int num : array) {
+            sum += num;
+        }
+        return sum;
+    }
+
+    public int findSumOfEven() {
+        int sum = 0;
+        for (int num : array) {
+            if (num % 2 == 0) {
+                sum += num;
+            }
+        }
+        return sum;
+    }
+
+    public int findSumOfOdd() {
+        int sum = 0;
+        for (int num : array) {
+            if (num % 2 != 0) {
+                sum += num;
+            }
+        }
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        ArrayOperations arrayOps = new ArrayOperations();
+        int[] arr = {1, 2, 3, 4, 5};
+        arrayOps.initializeArray(arr);
+
+        int sum = arrayOps.findSum();
+        int evenSum = arrayOps.findSumOfEven();
+        int oddSum = arrayOps.findSumOfOdd();
+
+        System.out.println("Сума: " + sum + ", Четни: " + evenSum + ", Нечетни: " + oddSum);
+    }
+}
