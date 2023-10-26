@@ -1,0 +1,13 @@
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3}; // Инициализация на масива
+
+        int sum = 0; // Променлива за сумата
+
+        for (int num : arr) { // Обхождане на елементите в масива
+            sum += num; // Нарастване на сумата
+        }
+
+        System.out.println("Сумата на елементите в масива е: " + sum);
+    }
+}
