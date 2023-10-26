@@ -1,0 +1,36 @@
+public class ArrayOperations {
+    private int[] array;
+
+    public void initializeArray(int[] arr) {
+        if (arr.length == 10) {
+            array = arr;
+        } else {
+            System.out.println("Масивът трябва да има точно 10 елемента.");
+        }
+    }
+
+    public void reverseArray() {
+        int left = 0;
+        int right = array.length - 1;
+
+        while (left < right) {
+            int temp = array[left];
+            array[left] = array[right];
+            array[right] = temp;
+            left++;
+            right--;
+        }
+    }
+
+    public static void main(String[] args) {
+        ArrayOperations arrayOps = new ArrayOperations();
+        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        arrayOps.initializeArray(arr);
+
+        System.out.println("Входен масив: " + Arrays.toString(arr));
+        
+        arrayOps.reverseArray();
+
+        System.out.println("Изходен масив: " + Arrays.toString(arrayOps.array));
+    }
+}
